@@ -37,24 +37,67 @@ p {
 .cards {
   background-color: #dcd1f0;
   margin-top: 50px;
+  height: 780px;
+  position: relative;
+}
+
+.cards .cards-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.cards .cards-wrapper {
+  position: relative;
+  z-index: 99999;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 40px;
 }
 
 .cards .cards-wrapper .cards-row {
   width: 310px;
   height: 362px;
+  margin-top: 15px;
   padding: 0px 20px;
   margin: 0px -20px;
 }
 
 .cards .cards-wrapper .cards-row .cards-col {
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
   border-radius: 6px;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cards .cards-wrapper .cards-row .cards-col:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.cards .cards-wrapper .cards-row .cards-col .col-top img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .cards .cards-wrapper .cards-row .cards-col .col-bottom {
   background-color: #fff;
   text-align: center;
-  padding: 30px 0px;
+  padding: 30px 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .cards .cards-wrapper .cards-row .cards-col .col-bottom .bottom-title h6 {
@@ -69,12 +112,11 @@ p {
   font-size: 1.50rem;
 }
 
-.cards .cards-wrapper .cards-row .cards-col .col-bottom .bottom-content {
-  margin-top: 18px;
-}
-
 .cards .cards-wrapper .cards-row .cards-col .col-bottom .bottom-content p {
+  margin-top: 15px;
   font-weight: 400;
+  font-size: 14px;
+  color: #191919;
 }
 
 .carousel-wrapper {
