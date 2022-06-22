@@ -1,5 +1,15 @@
 .form {
     margin-top : 100px;
+    position:relative;
+    .wavy-img {
+       position :absolute;
+       bottom : 0;
+       left : 0;
+       z-index : -10;
+    }
+    .clear {
+        clear: both;
+    }
     .container {
         .form-wrapper {
             background-color: $color-white;
@@ -19,6 +29,7 @@
                     margin-bottom : 30px;
                     border-radius: 15px;
                     margin-right : 70px;
+                    background-color: $color-white;
                     // margin-left: 100px;
                     .col2-wrapper {
                         width : 400px;
