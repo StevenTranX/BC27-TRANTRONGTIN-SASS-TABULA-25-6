@@ -94,6 +94,14 @@
           & i:hover {
             color: $color-black;
           }
+          & input {
+            border-radius : 50px;
+            background-color: $primary-color;
+            transition: all 1s ease;
+          }
+          & input:active {
+            border : 1px solid #fff
+          }
         }
       }
     }
